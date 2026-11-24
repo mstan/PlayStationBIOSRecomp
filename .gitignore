@@ -1,0 +1,12 @@
+/build/
+/dist/
+__pycache__/
+*.bin
+*.cue
+*.iso
+*.raw
+*.mcd
+*.exe
+*.dll
+*.zip
+*.log
