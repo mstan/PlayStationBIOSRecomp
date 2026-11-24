@@ -4,7 +4,7 @@ Standalone PlayStation system-menu consumer for the [psxrecomp](https://github.c
 
 ## Windows x64 preview
 
-Extract the ZIP and open **PlayStationBIOS.exe**. It starts on the bundled, MIT-licensed OpenBIOS. To run an original PlayStation BIOS, choose a compatible dump in the runtime's BIOS selector. The pinned engine verifies the original file and builds its native module locally on first use. The menu retains its startup sequence. Compatible retail BIOS revisions use the available native kernel services.
+Extract the ZIP and open **PlayStationBIOS.exe**. In recomp-ui, choose your original Sony SCPH-1001 BIOS dump and select **Play**. The release builds the matching native BIOS module locally the first time, then opens the original PlayStation menu. The BIOS image stays in its original location.
 
 Keep memory cards and settings when updating an existing installation. See the [engine's BIOS selection documentation](psxrecomp/docs/BIOS_SELECTION.md) for accepted revisions and locally generated modules.
 

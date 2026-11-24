@@ -37,7 +37,8 @@ def main():
     run(emitter / "psxrecomp-bios.exe", "--config", "bios/OpenBIOS.toml")
     run(cmake, "-S", ROOT, "-B", menu, "-G", "Ninja", "-DCMAKE_BUILD_TYPE=Release",
         "-DPSX_ENABLE_VULKAN=OFF", "-DBUILD_TESTING=OFF")
-    run(cmake, "--build", menu, "--target", "playstation-bios", "--parallel", str(args.jobs))
+    run(cmake, "--build", menu, "--target", "playstation-bios", "PlayStationBIOS",
+        "--parallel", str(args.jobs))
 
 
 if __name__ == "__main__":
