@@ -39,6 +39,9 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source, target)
     shutil.copytree(ENGINE / "runtime/licenses", stage / "licenses")
+    for mod in ("psx.integration.debug-server", "psx.integration.playable-replays"):
+        path = Path("mods/bundled") / mod
+        shutil.copytree(host / path, stage / path)
     subprocess.run([sys.executable, "-B", ENGINE / "tools/release_stage.py", "stage-toolchain",
                     "--stage", stage, "--recomp-dir", work / "emitter",
                     "--recomp-tools", ENGINE / "tools", "--recomp-include", ENGINE / "runtime/include",
